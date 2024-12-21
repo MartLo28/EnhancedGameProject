@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw It or Lose It</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        #gameCanvas {
+            border: 2px solid #333;
+            width: 60%;
+            height: 60%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Draw It or Lose It - Web Version</h1>
+    </header>
+
+    <main>
+        <canvas id="gameCanvas">Your browser does not support the HTML5 canvas element.</canvas>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Gaming Room</p>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const context = canvas.getContext('2d');
+
+        // Placeholder for drawing logic
+        function drawPlaceholder() {
+            context.fillStyle = '#FFF';
+            context.fillRect(0, 0, canvas.width, canvas.height);
+            context.fillStyle = '#000';
+            context.font = '30px Arial';
+            context.fillText('Game Canvas Placeholder', 50, 50);
+        }
+
+        drawPlaceholder();
+    </script>
+</body>
+</html>
